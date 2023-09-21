@@ -1,5 +1,7 @@
 package gui;
 
+import semana_05.ArregloSueldos;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -11,11 +13,12 @@ import javax.swing.JTextArea;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.UIManager;
 
 public class Problema_5_2 extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private JPanel contentPane;
 	private JButton btnListar;
 	private JButton btnReportar;
@@ -30,10 +33,10 @@ public class Problema_5_2 extends JFrame implements ActionListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 					Problema_5_2 frame = new Problema_5_2();
 					frame.setVisible(true);
-				}
-				catch (Exception e) {
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
@@ -51,30 +54,31 @@ public class Problema_5_2 extends JFrame implements ActionListener {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		btnListar = new JButton("Listar");
 		btnListar.addActionListener(this);
 		btnListar.setBounds(71, 11, 89, 23);
 		contentPane.add(btnListar);
-		
+
 		btnReportar = new JButton("Reportar");
 		btnReportar.addActionListener(this);
 		btnReportar.setBounds(171, 11, 89, 23);
 		contentPane.add(btnReportar);
-		
+
 		btnGenerar = new JButton("Generar");
 		btnGenerar.addActionListener(this);
 		btnGenerar.setBounds(271, 11, 89, 23);
 		contentPane.add(btnGenerar);
-		
+
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(10, 44, 414, 406);
 		contentPane.add(scrollPane);
-		
+
 		txtS = new JTextArea();
 		txtS.setFont(new Font("Monospaced", Font.PLAIN, 13));
 		scrollPane.setViewportView(txtS);
 	}
+
 	public void actionPerformed(ActionEvent arg0) {
 		if (arg0.getSource() == btnGenerar) {
 			actionPerformedBtnGenerar(arg0);
@@ -86,19 +90,43 @@ public class Problema_5_2 extends JFrame implements ActionListener {
 			actionPerformedBtnListar(arg0);
 		}
 	}
+
+	ArregloSueldos as = new ArregloSueldos();
+
 	protected void actionPerformedBtnListar(ActionEvent arg0) {
+		txtS.setText("");
+		for (int i = 0; i < as.tamanio(); i++) {
+			imprimir("n[" + i + "] :  " + as.obtener(i));
+		}
 	}
+
 	protected void actionPerformedBtnReportar(ActionEvent arg0) {
+		imprimir();
+		imprimir("Total de elementos : " + as.tamanio());
+		imprimir("Sueldo promedio : " + as.sueldoPromedio());
+		imprimir("Sueldo mayor : " + as.sueldoMayor());
+		imprimir("Sueldo menor : " + as.sueldoMenor());
+		imprimir("Cantidad mayor o igual al sueldo promedio : " + as.cantMayoresSueldoPromedio());
+		imprimir("Cantidad menor al sueldo promedio : " + as.cantMenoresSueldoPromedio());
+		imprimir("PosiciÃ³n del segundo sueldo mayor al mÃ­nimo : " + as.posSegundoSueldoMayorAlMinimo());
+		imprimir("PosiciÃ³n Ãºltimo sueldo menor al mÃ­nimo : " + as.posUltimoSueldoMenorAlMinimo());
+
 	}
+
 	protected void actionPerformedBtnGenerar(ActionEvent arg0) {
+		as.generarSueldo();
+		imprimir();
+		imprimir("Los sueldos han sido cambiados. Pulse [Listar]");
 	}
-	//  Métodos tipo void (sin parámetros)
+
+	// Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
-	//  Métodos tipo void (con parámetros)
+
+	// Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
-	
+
 }

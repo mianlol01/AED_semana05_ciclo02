@@ -7,72 +7,85 @@ public class ArregloEdades {
 	public int tamanio() {
 		return edad.length;
 	}
+
 	public int obtener(int i) {
 		return edad[i];
 	}
-	
-	public double edadPromedio(){
+
+	public double edadPromedio() {
 		int suma = 0;
-		for(int i=0; i<tamanio();i++){
-			suma+= edad[i];
+		for (int i = 0; i < tamanio(); i++) {
+			suma += edad[i];
 		}
-		return suma/tamanio();
+		return suma / tamanio();
 	}
-	public int edadMayor(){
+
+	public int edadMayor() {
 		int mayor = 0;
-		for(int i=0; i<tamanio();i++){
-			if(mayor<edad[i]){
+		for (int i = 0; i < tamanio(); i++) {
+			if (mayor < edad[i]) {
 				mayor = edad[i];
 			}
 		}
 		return mayor;
 	}
-	public int edadMenor(){
+
+	public int edadMenor() {
 		int menor = edad[0];
-		for(int i=1; i<tamanio();i++){
-			if(menor>edad[i]){
+		for (int i = 1; i < tamanio(); i++) {
+			if (menor > edad[i]) {
 				menor = edad[i];
 			}
 		}
 		return menor;
 	}
-	public int cantMayoresEdad(){
+
+	public int cantMayoresEdad() {
 		int cont = 0;
-		for(int i=0; i<tamanio();i++){ 
-			if(edad[i]>=18){cont++;}
+		for (int i = 0; i < tamanio(); i++) {
+			if (edad[i] >= 18) {
+				cont++;
+			}
 		}
 		return cont;
 	}
-	public int cantMenoresEdad(){
+
+	public int cantMenoresEdad() {
 		int cont = 0;
-		for(int i=0; i<tamanio();i++){ 
-			if(edad[i]<18){cont++;}
+		for (int i = 0; i < tamanio(); i++) {
+			if (edad[i] < 18) {
+				cont++;
+			}
 		}
 		return cont;
 	}
-	public int posPrimeraEdadAdolescente(){
-		for(int i=0; i<tamanio();i++){ 
-			if(edad[i]>=12 && edad[i]<=20){
+
+	public int posPrimeraEdadAdolescente() {
+		for (int i = 0; i < tamanio(); i++) {
+			if (edad[i] >= 12 && edad[i] <= 20) {
 				return i;
 			}
 		}
 		return -1;
 	}
-	public int posUltimaEdadAdolescente(){
-		for(int i=tamanio()-1; i>=0;i--){ 
-			if(edad[i]>=12 && edad[i]<=20){
+
+	public int posUltimaEdadAdolescente() {
+		for (int i = tamanio() - 1; i >= 0; i--) {
+			if (edad[i] >= 12 && edad[i] <= 20) {
 				return i;
 			}
 		}
 		return -1;
 	}
-	public void generarEdades(){
-		for(int i=tamanio()-1; i>=0;i--){ 
-			edad[i] = aleatorio(10,90);
+
+	public void generarEdades() {
+		for (int i = tamanio() - 1; i >= 0; i--) {
+			edad[i] = aleatorio(10, 90);
 		}
 	}
+
 	private int aleatorio(int min, int max) {
-		 return (int)((max - min + 1) * Math.random()) + min;
-		}
+		return (int) ((max - min + 1) * Math.random()) + min;
+	}
 
 }
