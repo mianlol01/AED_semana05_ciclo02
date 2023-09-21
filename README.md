@@ -30,7 +30,7 @@ mayor, edad menor, cantidad de personas mayores de edad, cantidad de personas me
 de edad, posición de la primera edad adolescente y posición de la última edad adolescente.
 - A la pulsación del botón Generar invoque al método generarEdades.
 
-- Problema_5_2
+Problema_5_2
 Diseñe la clase ArregloSueldos en el paquete semana_05 con el atributo privado sueldo (double)
 de tipo arreglo lineal y con los valores de inicialización:
 2400.5, 800.4, 1500.2, 1000.3, 4700.1, 600.0, 3300.8, 2600.6, 5100.9, 2000.7
@@ -60,7 +60,7 @@ promedio, cantidad de empleados cuyo sueldo es menor al sueldo promedio, posici�
 segundo sueldo mayor a 850.0 y posición del último sueldo menor a 850.0.
 - A la pulsación del botón Generar invoque al método generarSueldos.
 
-- Propuesto_5_1
+Propuesto_5_1
 Diseñe la clase ArregloNotas en el paquete semana_05 con el atributo privado nota (int) de tipo
 arreglo lineal y con los valores de inicialización:
 11, 10, 16, 18, 15, 13, 20, 12, 19, 17
@@ -92,7 +92,7 @@ notas mayores a 15, posición de la primera nota mayor o igual a 13 y posición 
 nota menor a 13.
 - A la pulsación del botón Generar invoque al método generarNotas.
 
-- Propuesto_5_2
+Propuesto_5_2
 Diseñe la clase ArregloPrecios en el paquete semana_05 con el atributo privado precio (double) de
 tipo arreglo lineal y con los valores de inicialización:
 240.5, 350.2, 80.4, 100.3, 470.1, 60.0, 330.8, 260.6, 510.9, 200.7
