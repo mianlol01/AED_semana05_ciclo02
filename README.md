@@ -22,7 +22,9 @@ comprendidas en el rango de 10 a 90 años. Haga uso del método:
 private int aleatorio(int min, int max) {
  return (int)((max - min + 1) * Math.random()) + min;
 }
+
 En la clase principal:
+
 - Declare y cree el objeto global ae de tipo ArregloEdades.
 - A la pulsación del botón Listar visualice las edades del arreglo.
 - A la pulsación del botón Reportar visualice: cantidad de edades, edad promedio, edad
@@ -51,7 +53,9 @@ mayor a 850.0. En caso no exista retorne -1.
 menor a 850.0. En caso no exista retorne -1.
 - Un método generarSueldos que remplace los sueldos actuales por otros aleatorios
 comprendidos en el rango de 799.9 a 4999.9 (con una cifra decimal).
+
 En la clase principal:
+
 - Declare y cree el objeto global as de tipo ArregloSueldos.
 - A la pulsación del botón Listar visualice los sueldos del arreglo.
 - A la pulsación del botón Reportar visualice: cantidad de sueldos, sueldo promedio, sueldo
@@ -83,7 +87,9 @@ igual a 13. En caso no exista retorne -1.
 menor a 13. En caso no exista retorne -1.
 - Un método generarNotas que remplace las notas actuales por otras aleatorias comprendidas
 en el rango de 0 a 20.
+
 En la clase principal:
+
 - Declare y cree el objeto global an de tipo ArregloNotas.
 - A la pulsación del botón Listar visualice las notas del arreglo.
 - A la pulsación del botón Reportar visualice: cantidad de notas, nota promedio, nota mayor,
@@ -113,7 +119,9 @@ mayor al segundo de los precios. En caso no exista retorne -1.
 menor al penúltimo de los precios. En caso no exista retorne -1.
 - Un método generarPrecios que remplace los precios actuales por otros aleatorios
 comprendidos en el rango de 99.9 a 999.9 (con una cifra decimal).
+
 En la clase principal:
+
 - Declare y cree el objeto global ap de tipo ArregloPrecios.
 - A la pulsación del botón Listar visualice los precios del arreglo.
 - A la pulsación del botón Reportar visualice: cantidad de precios, precio promedio, precio
