@@ -47,7 +47,6 @@ public class Propuesto_5_2 extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public Propuesto_5_2() {
-		setTitle("Propuesto_5_2");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 500);
 		contentPane = new JPanel();
@@ -102,15 +101,6 @@ public class Propuesto_5_2 extends JFrame implements ActionListener {
 	}
 
 	protected void actionPerformedBtnReportar(ActionEvent arg0) {
-		imprimir();
-		imprimir("Cantidad de precios : " + ap.tamanio());
-		imprimir("Precio promedio : " + ap.precioPromedio());
-		imprimir("Precio mayor : " + ap.precioMayor());
-		imprimir("Precio menor : " + ap.precioMenor());
-		imprimir("Cantidad mayor o igual al promedio : " + ap.cantMayoresPrecioPromedio());
-		imprimir("Cantidad menor al promedio : " + ap.cantMenoresPrecioPromedio());
-		imprimir("Posición primer precio mayor al segundo : " + ap.posPrimerPrecioMayorAlSegundo());
-		imprimir("Posición último precio menor al penúltimo : " + ap.posUltimoPrecioMenorAlPenultimo());
 
 	}
 
