@@ -1,0 +1,80 @@
+package semana_05;
+
+public class ArregloSueldos {
+	public double[] sueldo = { 2, 8, 5.2, 60.3, 470.1, 60.0, 33.8, 260.6, 510.9, 200.7 };
+
+	public int tamanio() {
+		return sueldo.length;
+	}
+
+	public double obtener(int i) {
+		return sueldo[i];
+	}
+
+	public double sueldoPromedio() {
+		double suma = 0;
+
+		for (double salario : sueldo) {
+			suma += salario;
+		}
+		return suma;
+	}
+
+	public double sueldoMayor(double[] sueldo) {
+		double mayor = sueldo[0];
+
+		for (double salario : sueldo) {
+			if (salario > mayor) {
+				mayor = salario;
+			}
+		}
+		return mayor;
+	}
+	public double sueldoMenor(double[] sueldo) {
+		double menor = sueldo[0];
+		
+		for (double salario : sueldo) {
+			if (salario < menor) {
+				menor = salario;
+            }
+		}
+		return menor;
+	}
+	public int cantMayoresSueldoPromedio(double[] sueldo, double promedio) {
+		int cantidadMayorPromedio = 0;
+		
+		for (double salario : sueldo) {
+            if (salario >= promedio) {
+            	cantidadMayorPromedio++;
+            }
+        }
+		return cantidadMayorPromedio;
+	}
+	public int cantMenoresSueldoPromedio (double[] sueldo, double promedio) {
+		int cantidadMenorPromedio = 0;
+		for (double salario : sueldo) {
+            if (salario < promedio) {
+            	cantidadMenorPromedio++;
+            }
+        }
+		return cantidadMenorPromedio;
+	}
+	public int posSegundoSueldoMayorAlMinimo (double[] sueldo) {
+		double minimo = 850;
+		int contador = 0;
+		int posicion = -1;
+		
+		for (double salario : sueldo) {
+			posicion++;
+			if (salario > minimo) {
+				contador++;
+				if (contador == 2) {
+					return posicion;
+					
+				}
+			}
+		}
+		return -1;
+	}
+
+}
